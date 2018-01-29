@@ -17,9 +17,9 @@ and test accuracies and their corresponding values.
 There are 2 python scripts i.e. Oil_Spill_Model.py and Oil_Spill_Model_Extra_Credit.py which contains the standard Deep Neural Network
 and mean-only batch normalized Neural Network. In order to run the files just open the console and run the below commands:
 
-python Oil_Spill_Model.py
+	**python Oil_Spill_Model.py**
 
-python Oil_Spill_Model_Extra_Credit.py
+	**python Oil_Spill_Model_Extra_Credit.py**
 
 
 ## Brief Explanation of the Implemented Models
@@ -42,11 +42,11 @@ b) Support for various Activation Functions:
 The variable "sigm" controls the activation function to be used for hidden layers. Currently, sigmoid(x), 
 1.7159*tanh(2x/3) and Relu activation functions are present. 
 
-Set sigm = 0 for Sigmoid,
+	Set sigm = 0 for Sigmoid,
 
-	sigm = 1 for Tanh,
+		sigm = 1 for Tanh,
 	
-	sigm = 2 for Relu.
+		sigm = 2 for Relu.
 	
 The output layer is a softmax activation layer.
 	
