@@ -17,9 +17,9 @@ and test accuracies and their corresponding values.
 There are 2 python scripts i.e. Oil_Spill_Model.py and Oil_Spill_Model_Extra_Credit.py which contains the standard Deep Neural Network
 and mean-only batch normalized Neural Network. In order to run the files just open the console and run the below commands:
 
-	**python Oil_Spill_Model.py**
+	python Oil_Spill_Model.py
 
-	**python Oil_Spill_Model_Extra_Credit.py**
+	python Oil_Spill_Model_Extra_Credit.py
 
 
 ## Brief Explanation of the Implemented Models
@@ -31,7 +31,8 @@ This python notebook has a general implementation of multi layer neural network 
 
 #### Functionality Implemented: 
 
-a) Variable No. of Hidden layers/Hidden units per layer
+a) Variable No. of Hidden layers/Hidden units per layer:
+
 The number of hidden layers and hidden units in each layer are controlled by the parameter "layers_dims".
 Currently layers_dims is set to [784,64,10].
 The implemented code provides support to accommodate any number of hidden layers.
@@ -39,18 +40,20 @@ If you would like to insert more hidden layers or change hidden units, then just
 
 
 b) Support for various Activation Functions:
+
 The variable "sigm" controls the activation function to be used for hidden layers. Currently, sigmoid(x), 
 1.7159*tanh(2x/3) and Relu activation functions are present. 
 
 	Set sigm = 0 for Sigmoid,
 
-		sigm = 1 for Tanh,
+	sigm = 1 for Tanh,
 	
-		sigm = 2 for Relu.
+	sigm = 2 for Relu.
 	
 The output layer is a softmax activation layer.
 	
-c) Support for Momentum Weight Update
+c) Support for Momentum Weight Update:
+
 There is support for Momentum Weight update present in the code. The variable "momentum" can be set to 1 to use 
 gradient descent with momentum.
 
