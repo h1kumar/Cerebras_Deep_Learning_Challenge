@@ -404,5 +404,5 @@ def oil_spill_model_extra_credit(path = ""):
     return acc_train,acc_val,acc_test
 
 
-acc_train, acc_val, acc_test = oil_spill_model_extra_credit("./data")
+#acc_train, acc_val, acc_test = oil_spill_model_extra_credit("./data")
 

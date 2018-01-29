@@ -434,5 +434,5 @@ def oil_spill_model(path = ""):
     return acc_train,acc_val,acc_test
 
 
-acc_train, acc_val, acc_test = oil_spill_model("./data")
+##acc_train, acc_val, acc_test = oil_spill_model("./data")
 
