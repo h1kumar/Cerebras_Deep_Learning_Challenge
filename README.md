@@ -8,18 +8,32 @@
 and test accuracies and their corresponding values.
 
 
-**code/Oil_Spill_Model.ipynb, code/Oil_Spill_Model.py**: Implementation of basic Deep Neural Network
+**code/Oil_Spill_Model.ipynb, code/Oil_Spill_Model.py**: Implementation of basic Deep Neural Network and all the function definitions
+**code/run_oil_spill_model.py**: This files imports the Oil_Spill_Model.py file and runs the Deep Neural Network
 
-**code/Oil_Spill_Model_Extra_Credit.ipynb, code/Oil_Spill_Model_Extra_Credit.py**: Implementation of mean-only batch normalized Deep Neural Network
 
+**code/Oil_Spill_Model_Extra_Credit.ipynb, code/Oil_Spill_Model_Extra_Credit.py**: Implementation of mean-only batch normalized Deep Neural Network with all the function definitions
+**code/run_oil_spill_model_extra_credit.py**: This file imports the Oil_Spill_Model_Extra_Credit.py file and runs the mean-only batch normalized Deep NN
+
+**code/unit_tests.py, code/end_to_end_test.py**: Basic Unit level test of Relu function and End to End Level tests of the entire network
 
 ## Running the Code
-There are 2 python scripts i.e. Oil_Spill_Model.py and Oil_Spill_Model_Extra_Credit.py which contains the standard Deep Neural Network
+There are 2 python scripts i.e. run_oil_spill_model.py and run_oil_spill_model_extra_credit.py which contains the standard Deep Neural Network
 and mean-only batch normalized Neural Network. In order to run the files just open the console and run the below commands:
 
-	python Oil_Spill_Model.py
+	python run_oil_spill_model.py
 
-	python Oil_Spill_Model_Extra_Credit.py
+	python run_oil_spill_model_extra_credit.py
+	
+	
+## Testing the Code
+There are 2 files "unit_tests.py" and "end_to_end_test.py" which does the basic unit level testing of the model and end to end testing of the entire network.
+In order to run the test files, run the below commands:
+
+	python unit_tests.py
+	
+	python end_to_end_test.py
+
 
 
 ## Brief Explanation of the Implemented Models
