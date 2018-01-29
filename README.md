@@ -132,8 +132,8 @@ With Mean Only Batch Normalization, I got
 	
 	Test Accuracy = 97.66
 	
-![alt text](./code/Results/Oil_Spill_Model.PNG "Standard Deep NN"){:height="30%" width="30%"}
-![alt text](./code/Results/Oil_Spill_Model_Extra_Credit.PNG "Mean-Only Batch Normalized Deep NN"){:height="30%" width="30%"}
+![alt text](./code/Results/Oil_Spill_Model.PNG "Standard Deep NN")
+![alt text](./code/Results/Oil_Spill_Model_Extra_Credit.PNG "Mean-Only Batch Normalized Deep NN")
 	
 From the Plots of training accuracy, validation accuracy and test accuracy, it is clear that with mean-only batch normalization, 
 the neural network attains 95% accuracy mark in relatively fewer iterations compared to standard model without mean batch normalization.
