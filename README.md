@@ -2,13 +2,15 @@
 
 
 ## Folder Structure
-code/Results: contains snapshots of Oil_Spill_Model.png and Oil_Spill_Model_Extra_Credit.png showing the plots of training, validation 
+**code/data/**: This directory contains Training Dataset and Test Dataset Files
+
+**code/Results/**: This directory contains snapshots "Oil_Spill_Model.png" and "Oil_Spill_Model_Extra_Credit.png" showing the plots of training, validation 
 and test accuracies and their corresponding values.
 
-code/data: Training Dataset and Test Dataset Files
 
-code/Oil_Spill_Model.ipynb, code/Oil_Spill_Model.py: Implementation of basic Deep Neural Network
-code/Oil_Spill_Model_Extra_Credit.ipynb, code/Oil_Spill_Model_Extra_Credit.py: Implementation of mean-only batch normalized Deep Neural Network
+**code/Oil_Spill_Model.ipynb, code/Oil_Spill_Model.py**: Implementation of basic Deep Neural Network
+
+**code/Oil_Spill_Model_Extra_Credit.ipynb, code/Oil_Spill_Model_Extra_Credit.py**: Implementation of mean-only batch normalized Deep Neural Network
 
 
 ## Running the Code
@@ -16,17 +18,19 @@ There are 2 python scripts i.e. Oil_Spill_Model.py and Oil_Spill_Model_Extra_Cre
 and mean-only batch normalized Neural Network. In order to run the files just open the console and run the below commands:
 
 python Oil_Spill_Model.py
+
 python Oil_Spill_Model_Extra_Credit.py
 
 
 ## Brief Explanation of the Implemented Models
 There are 2 Jupyter Python Notebooks the details of which are mentioned below:
 
-1. Oil_Spill_Model.ipynb
+### Oil_Spill_Model.ipynb
 
 This python notebook has a general implementation of multi layer neural network using NumPy.
 
-Functionality Implemented: -
+#### Functionality Implemented: 
+
 a) Variable No. of Hidden layers/Hidden units per layer
 The number of hidden layers and hidden units in each layer are controlled by the parameter "layers_dims".
 Currently layers_dims is set to [784,64,10].
@@ -34,7 +38,7 @@ The implemented code provides support to accommodate any number of hidden layers
 If you would like to insert more hidden layers or change hidden units, then just update the value of this variable.
 
 
-b) Support for various Activation Functions:-
+b) Support for various Activation Functions:
 The variable "sigm" controls the activation function to be used for hidden layers. Currently, sigmoid(x), 
 1.7159*tanh(2x/3) and Relu activation functions are present. 
 
@@ -49,30 +53,48 @@ There is support for Momentum Weight update present in the code. The variable "m
 gradient descent with momentum.
 
 
-Detailed List of Functions Implemented: -
+**Detailed List of Functions Implemented**: 
+
 	1. one_hot_encoding -> Does One hot encoding of output labels 
+	
 	2. init_weights -> Random Weight Initialization of each layer
+	
 	3. relu         -> Computing Relu Activation for a hidden layer
+	
 	4. sigmoid      -> Computing Sigmoid(s)/Tanh(x) Activation for a hidden layer
+	
 	5. softmax      -> Computing Softmax Activation for a Output layer
+	
 	6. linear_prop_forward   -> Implementation of Linear Forward Propagation of the NN
+	
 	7. compute_cost          -> Cross Entropy Cost Computation 
+	
 	8. relu_derivative       -> Relu Derivative Computation for Back Propagation
+	
 	9. sigmoid_derivative    -> Sigmoid Derivative Computation for Back Propagation
+	
 	10. grad_calculation     -> Gradient Calculation for hidden layer parameters
+	
 	11. linear_prop_backward -> Implementation of Linear Backward Propagation thereby computing gradients
+	
 	12. update_params   -> Updating hidden layer parameters
+	
 	13. predict         -> Accuracy Prediction for Given Image Vector
+	
 	14. get_mb          -> Generating Mini Batches for a given mini-batch size
+	
 	15. momentum_v_init -> Initialization of Momentum Parameter "v"
+	
 	16. momentum_update -> Weight Update using Momentum
+	
 	17. multi_layer_model -> Trains Deep NN on training set and returns the parameters learned
+	
 	18. oil_spill_model   -> Reads the Dataset, does basic preprocessing and then runs the multi_layer_model
 	
 
 	
 	
-2.	Oil_Spill_Model_Extra_Credit.ipynb
+###	Oil_Spill_Model_Extra_Credit.ipynb
 This python notebook is very much similar to the above with mostly same functions implemented in it. 
 In order to compute mean only batch normalization, I have implemented additional layer 784 after input layer 
 which computes the mean normalization. I have updated the existing functions to init_weights_2, linear_prop_forward_2,
@@ -80,7 +102,8 @@ linear_prop_backward_2, update_params_2 and predict_2.
 
 
 
-RESULTS:-
+## RESULTS:
+
 The training set is normalized by dividing it by 255 so that all the pixel values are between 0 and 1.
 The original training set is split to get 50,000 training examples and 10,000 validation examples in order to 
 check the performance of the training model on the validation set. 
@@ -91,14 +114,20 @@ the "mini_batch_size" parameter.
 
 
 Without Mean Only Batch Normalization, I got
+
 	Training Accuracy = 99.92
+	
 	Validation Accuracy = 97.57
+	
 	Test Accuracy = 97.56
 	
 	
 With Mean Only Batch Normalization, I got
+
 	Training Accuracy = 99.938
+	
 	Validation Accuracy = 97.68
+	
 	Test Accuracy = 97.66
 	
 ![alt text](./code/Results/Oil_Spill_Model.PNG "Standard Deep NN")
