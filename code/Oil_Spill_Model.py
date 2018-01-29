@@ -4,7 +4,6 @@ from mnist import MNIST
 import matplotlib.pyplot as plt
 
 
-
 def one_hot_encoding(train_Y, val_Y, test_Y):
     '''
     Computing one hot encoding of output labels
@@ -376,8 +375,6 @@ def multi_layer_model(X, Y_1H, Y, val_X, val_Y, test_X, test_Y, layers_dims, lea
     plt.title("Learning rate =" + str(learning_rate))
     plt.show()
     return parameters
-
-
 
 def oil_spill_model(path = ""):
     '''

@@ -348,7 +348,6 @@ def multi_layer_model(X, Y_1H, Y, val_X, val_Y, test_X, test_Y, layers_dims,
     plt.show()
     return parameters
 
-
 def oil_spill_model_extra_credit(path = ""):
     '''
     Reading Training and Test Data Sets, Normalizing them by dividing by 225,
