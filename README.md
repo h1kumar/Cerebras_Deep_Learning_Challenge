@@ -4,7 +4,7 @@
 ## Folder Structure
 **code/data/**: This directory contains Training Dataset and Test Dataset Files
 
-**code/results/**: This directory contains snapshots "Oil_Spill_Model.png" and "Oil_Spill_Model_Extra_Credit.png" showing the plots of training, validation 
+**code/Results/**: This directory contains snapshots "Oil_Spill_Model.png" and "Oil_Spill_Model_Extra_Credit.png" showing the plots of training, validation 
 and test accuracies and their corresponding values.
 
 
