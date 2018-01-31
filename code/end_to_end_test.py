@@ -11,3 +11,5 @@ a,b,c = osmec.oil_spill_model_extra_credit("./data")
 assert 95<=a<=100
 assert 95<=b<=100
 assert 95<=c<=100
+
+print "End to End Tests passed for both models."
