@@ -1,17 +1,30 @@
 import Oil_Spill_Model as osm
+import numpy as np
 
-## Basic Testing of Relu Functions and their Derivatives
-a,_ = osm.relu(0,0,0)
-assert a == 0
+## Relu Function
+A = np.random.randn(2,3)
+W = np.random.randn(3,2)
+B = np.random.randn(3,1)
+a,_ = osm.relu(A,W,B)
+np.testing.assert_array_equal(a,np.maximum(0,np.dot(W,A)+B))
 
-a   = osm.relu_derivative(1,-1)
-assert a == 0
+## Relu Derivative Function
+A = np.random.randn(2,3)
+W = np.random.randn(2,3)
+a = osm.relu_derivative(A,W)
+np.testing.assert_array_equal(a,np.multiply(A,W>0))
 
-a   = osm.relu_derivative(1,1)
-assert a == 1
+## Sigmoid Function
+A = np.random.randn(2,3)
+W = np.random.randn(3,2)
+B = np.random.randn(3,1)
+a,_ = osm.sigmoid(A,W,B)
+np.testing.assert_array_equal(a, 1/ (1 + np.exp(-(np.dot(W,A)+B))))
 
-a,_ = osm.sigmoid([[-1],[0],[1]],[[1,1,1]],[0])
-assert a == 0.5
+## Sigmoid Derivative Function
+A = np.random.randn(2,3)
+W = np.random.randn(2,3)
+a = osm.sigmoid_derivative(A,W)
+np.testing.assert_array_equal(a, np.multiply(A,W*(1-W)))
 
-a = osm.sigmoid_derivative(4,0.5)
-assert a == 1
+print ("All Unit tests Passed")
